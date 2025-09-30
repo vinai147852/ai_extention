@@ -1,0 +1,21 @@
+{
+    "name": "sample-mcp-server",
+    "version": "1.0.0",
+    "description": "Sample MCP server for testing Copilot MCP Bridge",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "dev": "nodemon server.js",
+        "stop": "npx kill-port 3000",
+        "restart": "npm run stop && npm start",
+        "test": "curl -X GET http://localhost:3000/health || echo 'Server not running'"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "cors": "^2.8.5"
+    },
+    "devDependencies": {
+        "nodemon": "^3.0.2",
+        "kill-port": "^2.0.1"
+    }
+}
